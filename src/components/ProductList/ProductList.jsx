@@ -1,8 +1,8 @@
 import Butter from '../../assets/butter.png'
 import Strawberry from '../../assets/strawberry.png'
 import Eggs from '../../assets/eggs.png'
-import Cabbage from '../../assets/Cabbage.png'
-import Eggplant from '../../assets/Eggplant.png'
+import Cabbage from '../../assets/cabbage.png'
+import Eggplant from '../../assets/eggplant.png'
 import Shrimp from '../../assets/shrimp.png'
 import Kiwi from '../../assets/kiwi.png'
 import Capsicum from '../../assets/capsicum.png'
@@ -24,7 +24,7 @@ import RicottaCheese from '../../assets/ricotta-cheese.png'
 import Grapes from '../../assets/grapes.png'
 import Lettuce from '../../assets/lettuce.png'
 
-const products = [
+const productList = [
     {
         id: 1,
         name: 'Strawberry',
@@ -72,14 +72,14 @@ const products = [
         name: 'Kiwi',
         price: 2.05,
         category: 'Fruits',
-        image: Strawberry
+        image: Kiwi
     },
     {
         id: 8,
         name: 'Capsicum',
         price: 4.0,
         category: 'Vegetables',
-        image: Strawberry
+        image: Capsicum
     },
     {
         id: 9,
@@ -99,14 +99,14 @@ const products = [
         id: 11,
         name: 'Beef',
         price: 3.0,
-        category: 'Fruits',
+        category: 'SeaFood',
         image: Beef
     },
     {
         id: 12,
         name: 'ChickenBreast',
         price: 3.0,
-        category: 'Fruits',
+        category: 'SeaFood',
         image: ChickenBreast
     },
     {
@@ -198,9 +198,9 @@ const products = [
         name: 'Lettuce Leaf',
         price: 3.0,
         category: 'Vegetables',
-        image: Strawberry
+        image: Lettuce
     },
 
 ]
 
-export default products
+export default productList

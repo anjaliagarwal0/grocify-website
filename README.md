@@ -1,16 +1,44 @@
-# React + Vite
+# Grocify Website (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Development
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Build for production:
 
-## React Compiler
+```bash
+npm run build
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Docker (build + run)
 
-## Expanding the ESLint configuration
+### 1) Build and run with Docker Compose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+docker compose up --build
+```
+
+This will:
+- build the image using `Dockerfile`
+- start an Nginx container serving the Vite production build
+
+### 2) Open the website
+
+Go to:
+- http://localhost:8080
+
+### 3) Stop the containers
+
+```bash
+docker compose down
+```
+
+## Notes
+
+- `Dockerfile` is multi-stage:
+  - Node stage builds the Vite app (`npm run build`)
+  - Nginx stage serves the compiled assets from `dist/`
+

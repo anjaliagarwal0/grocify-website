@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../Button/Button'
+import { FaHeart, FaPlus } from 'react-icons/fa'
 
 const Cards = ({image, name, price}) => {
     return (
